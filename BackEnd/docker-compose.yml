@@ -1,0 +1,9 @@
+version: "3"
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./requirements.txt:/app/requirements.txt
+    command: python /app/__init__.py

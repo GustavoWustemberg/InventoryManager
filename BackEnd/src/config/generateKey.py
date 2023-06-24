@@ -1,5 +1,4 @@
 from cryptography.fernet import Fernet, InvalidToken
-import base64
 import os
 
 KEY_FILE = "key.key"

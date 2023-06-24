@@ -1,6 +1,6 @@
-from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
+from flask_jwt_extended import JWTManager, create_access_token
 from DataBank.Models.User.userDb import User
-from flask import request, make_response, jsonify
+from flask import request
 from src.config.configApi import app
 from src.config.generateKey import cipher_suite
 

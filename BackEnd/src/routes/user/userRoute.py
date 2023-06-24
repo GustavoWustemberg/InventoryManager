@@ -2,14 +2,11 @@ from DataBank.Models.User.userDb import User
 from flask import request, make_response, jsonify
 from playhouse.shortcuts import model_to_dict
 from email_validator import validate_email
-from src.config.configApi import app
 from datetime import datetime
+from src.config.configApi import app
 from src.config.generateKey import cipher_suite
 
 def UserRoutes():
-    # criar uma chave secreta para criptografia
-    # key = Fernet.generate_key()
-    # cipher_suite = Fernet(key)
 
     ####################################### Rotas comuns ##############################################################
     @app.route('/user', methods=['GET'])

@@ -1,6 +1,6 @@
 from DataBank.Models.Enterprise.enterpriseDb import Enterprise
 from flask import request, make_response, jsonify
-from playhouse.shortcuts import dict_to_model, model_to_dict
+from playhouse.shortcuts import dict_to_model
 from src.config.configApi import app
 from peewee import DoesNotExist
 from datetime import datetime
