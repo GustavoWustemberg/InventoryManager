@@ -1,0 +1,36 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator erd {
+  provider = "prisma-erd-generator"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  user_id       Int       @id @default(autoincrement())
+  user_name     String
+  user_email    String    @unique
+  user_password String
+  created_at    DateTime  @default(now())
+  updated_at    DateTime? @db.DateTime
+  stocks        Stock[]
+}
+
+model Stock {
+  stock_id      Int      @id @default(autoincrement())
+  product_name  String
+  product_price Decimal
+  qnt_product   Int
+  created_at    DateTime @default(now()) 
+  updated_at    DateTime? 
+  FK_user_id    Int
+  user          User    @relation(fields: [FK_user_id], references: [user_id])
+}

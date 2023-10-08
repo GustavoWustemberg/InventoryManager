@@ -1,0 +1,25 @@
+{
+  "name": "stockapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@mermaid-js/mermaid-cli": "^10.4.0",
+    "prisma": "^5.4.1",
+    "prisma-erd-generator": "^1.11.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.4.0",
+    "@prisma/client": "^5.4.1",
+    "fastify": "^4.23.2",
+    "tsx": "^3.13.0",
+    "zod": "^3.22.4"
+  }
+}
