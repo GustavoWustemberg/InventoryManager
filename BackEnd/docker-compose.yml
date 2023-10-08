@@ -1,0 +1,12 @@
+version: "3"
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./requirements.txt:/app/requirements.txt
+    ports:
+      - 3333:3333
+    command: python /app/__init__.py
+
